@@ -62,8 +62,9 @@
       <RouterLink to="/decouvrir">
           <i class="fas fa-video"></i>
       </RouterLink>
-
+      <RouterLink to="/tickets">
       <i class="fas fa-ticket-alt"></i>
+    </RouterLink>
       <RouterLink to="/profile">
         <i class="fas fa-user"></i>
       </RouterLink>

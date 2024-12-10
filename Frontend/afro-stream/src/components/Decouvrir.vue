@@ -1,5 +1,6 @@
-
-
+<!-- eslint-disable vue/multi-word-component-names -->
+// eslint-disable-next-line vue/multi-word-component-names
+<!-- eslint-disable-next-line vue/multi-word-component-names -->
 <template>
   <div class="flex flex-col h-screen bg-yellow-50">
     <!-- Barre de recherche -->
@@ -58,8 +59,9 @@
 
       <i class="fas fa-video"></i>
 
-
+      <RouterLink to="/tickets">
       <i class="fas fa-ticket-alt"></i>
+    </RouterLink>
       <RouterLink to="/profile">
         <i class="fas fa-user"></i>
       </RouterLink>
@@ -69,7 +71,7 @@
 </template>
 
 <script>
-import { RouterLink } from 'vue-router';
+// import { RouterLink } from 'vue-router';
 
 export default {
   data() {

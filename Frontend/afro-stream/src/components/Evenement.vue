@@ -3,9 +3,11 @@ import { RouterLink } from 'vue-router';
   <div class="bg-amber-100 min-h-screen font-sans">
     <!-- Header avec bouton de retour -->
     <header class="p-4">
+      <RouterLink to="/home">
       <button class="text-gray-800 text-lg cursor-pointer hover:underline">
         ← Retour
       </button>
+    </RouterLink>
     </header>
 
     <!-- Image de l'événement -->
