@@ -19,5 +19,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('apiback.urls')),
+    path('api/', include('apiback.urls')), # Inclusion des URLs de l'application apiback
 ]

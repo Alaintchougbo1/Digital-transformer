@@ -3,7 +3,7 @@ from django.db import models
 from django.utils import timezone
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import Event
+from .models import Event, User
 from .serializers import EventSerializer
 from .models import Ticket, Notification
 from celery import shared_task
@@ -17,7 +17,7 @@ from rest_framework.permissions import IsAuthenticated
 class EventListAPI(APIView):
     def get(self, request):
         # Récupérer tous les événements "à venir" et "en cours"
-        events = Event.objects.filter(status__in=['à venir', 'en cours']).order_by('date')
+        events = Event.objects.filter(status__in=['A venir', 'En cours']).order_by('date')
         serializer = EventSerializer(events, many=True)
         return Response(serializer.data)
 
@@ -32,7 +32,7 @@ def create_event(request):
     for user in users:
         Notification.objects.create(
             user=user,
-            message=f"Un nouveau événement '{new_event.title}' a été ajouté !",
+            message=f"Un nouvel événement '{new_event.title}' a été ajouté !",
             notification_type='new_event'
         )
     
@@ -46,7 +46,7 @@ def notify_payment_due():
     for ticket in tickets:
         Notification.objects.create(
             user=ticket.user,
-            message=f"La date limite de paiement pour l'événement '{ticket.event.title}' approche !",
+            message=f"La date limite de paiement pour l'événement '{ticket.event.title}' approche à grands pas !",
             notification_type='payment_due',
             due_date=ticket.payment_due_date
         )
