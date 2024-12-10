@@ -1,3 +1,4 @@
+import { RouterLink } from 'vue-router';
 <template>
   <div class="bg-amber-100 min-h-screen font-sans">
     <!-- Header avec bouton de retour -->
@@ -40,10 +41,12 @@
         </p>
 
         <!-- Bouton d'achat -->
+         <RouterLink to="/achat">
         <button
           class="block w-full max-w-md mx-auto bg-green-600 hover:bg-green-700 text-white py-4 text-lg font-bold rounded-lg transition-colors">
           ACHETER
         </button>
+      </RouterLink>
       </section>
     </main>
   </div>
