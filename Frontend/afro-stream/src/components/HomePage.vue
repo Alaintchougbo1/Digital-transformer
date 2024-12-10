@@ -64,7 +64,10 @@
       </RouterLink>
 
       <i class="fas fa-ticket-alt"></i>
-      <i class="fas fa-user"></i>
+      <RouterLink to="/profile">
+        <i class="fas fa-user"></i>
+      </RouterLink>
+      <!-- <i class="fas fa-user"></i> -->
     </footer>
   </div>
 </template>
