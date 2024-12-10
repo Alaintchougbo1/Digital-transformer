@@ -1,18 +1,24 @@
 <template>
-    <div class="flex flex-col h-screen bg-yellow-50">
+    <div class="flex flex-col h-screen bg-yellow-100">
       <!-- Header -->
-      <header class="bg-yellow-400 flex justify-between items-center p-4 shadow-md">
+      <header class="bg-white flex justify-between items-center h-20  shadow-md">
         <div class="flex items-center text-lg font-bold">
-          <i class="fas fa-tv mr-2"></i>
-          Afro Stream
+          <span>
+            <img src="/log.png"
+            width="150px"
+            height="50px"
+            alt="">
+          </span>
+          <!-- <i class="fas fa-tv mr-2"></i>
+          Afro Stream -->
         </div>
-        <div class="flex space-x-4 text-xl">
+        <div class="flex space-x-4 text-xl pr-5">
           <i class="fas fa-search"></i>
           <i class="fas fa-bell"></i>
           <i class="fas fa-user-circle"></i>
         </div>
       </header>
-  
+
       <!-- Search Bar -->
       <!-- <div class="p-4">
         <input
@@ -21,9 +27,9 @@
           class="w-full p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
         />
       </div> -->
-  
+
       <!-- Events -->
-      <main class="flex-1 overflow-y-auto space-y-4 px-4">
+      <main class="flex-1 overflow-y-auto space-y-4 px-4 mt-3">
         <div
           v-for="event in events"
           :key="event.id"
@@ -45,9 +51,9 @@
           </span>
         </div>
       </main>
-  
+
       <!-- Footer -->
-      <footer class="bg-green-600 flex justify-around items-center p-4 text-white text-xl">
+      <footer class=" bg-[#0B8A58] flex justify-around items-center p-4 text-white text-xl">
         <i class="fas fa-home"></i>
         <i class="fas fa-video"></i>
         <i class="fas fa-ticket-alt"></i>
@@ -55,7 +61,7 @@
       </footer>
     </div>
   </template>
-  
+
   <script>
   export default {
     data() {
@@ -67,7 +73,7 @@
             views: 0,
             date: "A venir",
             status: "Bientôt",
-            image: "/eya.jpg",
+            image: "/eya.jpeg",
           },
           {
             id: 2,
@@ -98,7 +104,7 @@
     },
   };
   </script>
-  
+
   <style>
   @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
   </style>

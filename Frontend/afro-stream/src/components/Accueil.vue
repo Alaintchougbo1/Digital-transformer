@@ -1,20 +1,26 @@
 <template>
-    <div class="bg-yellow-100 flex justify-center items-center min-h-screen">
-        <span>
-            <p class=" text-opacity-30 justify-center">Bienvenue sur</p>
-            <span>
-                <img
-                    src="/AfroStream.png"
-                    alt="AfroStream Logo"
-                    class=" w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
-                />
-            </span>
-            <p class=" mb-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-        </span>
+  <div class="bg-yellow-100 flex justify-center items-center min-h-screen">
+    <div>
+      <p class="text-lg text-gray-600 text-center">Bienvenue sur</p>
+      <img
+        src="/AfroStreamText1.png"
+        alt="Logo AfroStream"
+        class="w-48 mt-4"
+      />
+      <p class="mt-4 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
+  </div>
 </template>
 
-  <style scoped>
-  </style>
+<script>
+export default {
+  name: "Accueil",
+  mounted() {
+    setTimeout(() => {
+      this.$router.push('/home');
+    }, 3000); // 3000 millisecondes = 3 secondes
+  },
+};
+</script>
+
+<style scoped></style>

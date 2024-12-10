@@ -11,7 +11,7 @@ import PreAccueil from './components/PreAccueil.vue';
 
 </style> -->
 
-<template>
+<!-- <template>
   <div class=" text-2xl bg-yellow-100 flex justify-center items-center min-h-screen">
         <PreAccueil v-if="showPreAccueil"/>
     <Profile v-else />
@@ -38,5 +38,22 @@ onMounted(() => {
 
 <style>
 /* Ajoutez vos styles ici si nécessaire */
-</style>
+</style> -->
 
+
+<template>
+  <div class="text-2xl bg-yellow-100 min-h-screen">
+    <router-view />
+
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+};
+</script>
+
+<style>
+/* Ajoute des styles globaux si nécessaire */
+</style>
