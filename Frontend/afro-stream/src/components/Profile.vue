@@ -1,9 +1,8 @@
 <template>
-
-    <div class="bg-yellow-100 flex justify-center items-center min-h-screen flex-col">
-        <div
-        class=" -mt-28"
-      >
+  <div class="bg-yellow-100 flex flex-col min-h-screen">
+    <!-- Contenu principal -->
+    <div class="flex-1 flex flex-col justify-center items-center">
+      <div class="-mt-28">
         <img src="/log.png" height="50px" width="200px" alt="" />
       </div>
       <div class="w-80 p-4 -mt-14">
@@ -19,38 +18,67 @@
             <p class="text-sm text-gray-500">@maxfhgd2024</p>
           </div>
         </div>
-        <div class=" text-lg text-black-400 -mt-2 mb-2 px-2 py-4 ">
-            @digitaltransformers@gmail.com
+        <div class="text-lg text-black-400 -mt-2 mb-2 px-2 py-4">
+          @digitaltransformers@gmail.com
         </div>
         <!-- Boutons d'actions -->
         <div class="space-y-4">
-          <button class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg">Configurer le profil</button>
-          <button class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg">Changer le mot de passe</button>
-          <button class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg">Favoris</button>
-          <button class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg">Historique</button>
-          <button class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg">Devenir oganisateur</button>
-          <button class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg">Se déconnecter</button>
-          <!-- <button class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg">Se déconnecter</button> -->
+          <button
+            class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg"
+          >
+            Configurer le profil
+          </button>
+          <button
+            class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg"
+          >
+            Changer le mot de passe
+          </button>
+          <button
+            class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg"
+          >
+            Favoris
+          </button>
+          <button
+            class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg"
+          >
+            Historique
+          </button>
+          <button
+            class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg"
+          >
+            Devenir organisateur
+          </button>
+          <button
+            class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg"
+          >
+            Se déconnecter
+          </button>
         </div>
-
-        <!-- Liens en bas -->
-        <!-- <div class="flex justify-between mt-6">
-          <button class="bg-gray-200 text-gray-800 py-1 px-3 rounded-md hover:bg-gray-300">Paramètres</button>
-          <button class="bg-gray-200 text-gray-800 py-1 px-3 rounded-md hover:bg-gray-300">Se déconnecter</button>
-        </div> -->
       </div>
-      <!-- <div class=" flex flex-col ">
-        <span class=" bg-white rounded-full px-3 py-2 text-sm text-[#0B8A58]">
-            Evenements / Tickets
-        </span>
-        <span class=" border border-b-4  -mt-4"></span>
-    </div> -->
     </div>
 
-  </template>
+    <!-- Footer -->
+    <footer class="bg-[#0B8A58] flex justify-around items-center p-4 text-white text-xl">
+      <RouterLink to="/home">
+        <i class="fas fa-home"></i>
+      </RouterLink>
+      <RouterLink to="/decouvrir">
+        <i class="fas fa-video"></i>
+      </RouterLink>
+      <i class="fas fa-ticket-alt"></i>
+      <RouterLink to="/profile">
+        <i class="fas fa-user"></i>
+      </RouterLink>
+    </footer>
+  </div>
+</template>
 
-  <script>
-  export default {
-    name: "ProfileComponent",
-  };
-  </script>
+<script>
+export default {
+  name: "ProfileComponent",
+};
+</script>
+
+<style>
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
+</style>
