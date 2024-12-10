@@ -15,5 +15,60 @@
 <script src="/public/js-sdk.js"></script>
 <script src="/public/config.js"></script>
 <script src="/public/vconsole.min.js"></script>
+
+<script>
+  window.onload = login()
+  function login() {
+
+    window.ma.callNativeAPI("gethwssostring", { merchantAppId: '1322098216422402' }, res => {
+      console.log("superapptoken res:", res);
+      console.log("superapptoken:", res.xm_string_callback_key);
+      var superapptoken = res.xm_string_callback_key
+
+      $.ajax({
+        url: 'https:',//replace the url to your mini program get accesstoken API
+        method: 'POST',
+        async: true,
+        data: {
+          client_id: "XXXXae980",
+          client_secret: "XXXXae9802",
+          grant_type: "client_credentials"
+        },//replace to the data request by your mini program server
+        success: function (response) {
+          console.log('miniservertoken:', response.access_token);
+          var miniservertoken = response.access_token
+
+          $.ajax({
+            url: 'https:',//replace the url with your mini program get mini program user token API
+            method: 'POST',
+            async: true,
+            headers: {
+              'Content-Type': "application/json",
+              'access-token': miniservertoken
+            },
+            data: JSON.stringify({
+              "authCode": superapptoken
+            }),
+            success: function (response) {
+              console.log('miniusertoken:', response['result']['access-token']);
+              window.accesstoken = response['result']['access-token']
+            },
+            error: function (xhr, status, error) {
+              console.log('miniusertoken create fail', error);
+            }
+          });
+
+        },
+        error: function (xhr, status, error) {
+          console.log('miniservertoken create fail', error);
+        }
+      });
+
+    }).catch((e) => {
+      console.log("superapptoken create fail", e);
+    }
+    );
+  }
+</script>
 </body>
 </html>
