@@ -6,6 +6,8 @@ import Profile from '@/components/Profile.vue';
 import Decouvrir from '@/components/HomePage.vue';
 // import { name } from '@vue/eslint-config-prettier/skip-formatting';
 import AchatBillet from '@/components/AchatBillet.vue';
+// import { name } from '@vue/eslint-config-prettier/skip-formatting';
+import Evenement from '@/components/Evenement.vue';
 
 const routes = [
   { path: '/', name: 'PreAccueil', component: PreAccueil },
@@ -13,7 +15,8 @@ const routes = [
   { path: '/decouvrir', name: 'Home', component: HomePage },
   { path: '/profile', name: 'Profile', component: Profile },
   { path: '/home', name: 'Decouvrir',component: Decouvrir },
-  { path: '/achat', name:'Achat', component: AchatBillet }
+  { path: '/achat', name:'Achat', component: AchatBillet },
+  { path: '/eventfutu', name: 'Eventfutu', component: Evenement },
 ];
 
 const router = createRouter({
