@@ -14,7 +14,7 @@ import PreAccueil from './components/PreAccueil.vue';
 <template>
   <div class=" text-2xl bg-yellow-100 flex justify-center items-center min-h-screen">
         <PreAccueil v-if="showPreAccueil"/>
-    <Accueil v-else />
+    <Profile v-else />
   </div>
 </template>
 
@@ -22,6 +22,10 @@ import PreAccueil from './components/PreAccueil.vue';
 import { ref, onMounted } from "vue";
 import PreAccueil from './components/PreAccueil.vue';
 import Accueil from './components/Accueil.vue';
+import Decouvrir from "./components/Decouvrir.vue";
+import Loader from "./components/Loader.vue";
+import HomePage from "./components/HomePage.vue";
+import Profile from "./components/Profile.vue";
 
 const showPreAccueil = ref(true);
 
