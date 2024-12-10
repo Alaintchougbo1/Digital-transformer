@@ -81,7 +81,7 @@
           type="submit"
           class="w-full bg-green-600 text-white py-3 rounded-lg flex items-center justify-center hover:bg-green-700"
         >
-          <img src="my-celtiis-logo.png" alt="My Celtiis" class="h-6 mr-2" />
+          <img src="/celtiis_log.png" alt="My Celtiis" class="h-6 mr-2" />
           <span class="font-semibold">PAYER AVEC</span>
         </button>
       </form>
