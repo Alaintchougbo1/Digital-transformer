@@ -1,6 +1,5 @@
 from django.shortcuts import redirect, render
 from django.db import models
-from django.contrib.auth.models import User
 from django.utils import timezone
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -22,28 +21,7 @@ class EventListAPI(APIView):
         serializer = EventSerializer(events, many=True)
         return Response(serializer.data)
 
-#Système de notifications
-class Notification(models.Model):
-    NOTIFICATION_TYPES = [
-        ('new_event', 'Nouveau Evènement'),
-        ('payment_due','Date limite de paiement'),
-        ('event_start', 'Début d\'évènement'),
-        ('invoice_received','Facture reçue'),
-    ]
-    user = models.ForeignKey(User, on_delete=models.CASCADE)    
-    message = models.TextField()
-    notification_type = models.CharField(max_length=50, choices=NOTIFICATION_TYPES)
-    is_read = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    due_date = models.DateTimeField(null=True, blank=True)  # Pour gérer les dates limites de paiement
 
-    def __str__(self):
-        return f"Notification pour {self.user.username}: {self.message}"
-
-    def mark_as_read(self):
-        self.is_read = True
-        self.save()
-    
 #Notification de Création d'un nouvel événement    
 def create_event(request):
     # Logique pour créer un événement...
@@ -100,6 +78,7 @@ def process_payment(request):
 
     return redirect('payment_success')
 
+#Vue pour lister les notifications dans views.py
 class NotificationList(APIView):
     permission_classes = [IsAuthenticated]
 

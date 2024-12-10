@@ -7,8 +7,6 @@ class EventSerializer(serializers.ModelSerializer):
         model = Event
         fields = ['id', 'title', 'description', 'date', 'duration', 'price', 'status', 'organizer']
 
-from rest_framework import serializers
-from .models import Notification
 
 class NotificationSerializer(serializers.ModelSerializer):
     class Meta:

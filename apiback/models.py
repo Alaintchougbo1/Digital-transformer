@@ -68,3 +68,26 @@ class Payment(models.Model):
 
     def __str__(self):
         return f'Payment of {self.amount} by {self.user.name}'
+
+#Système de notifications
+class Notification(models.Model):
+    NOTIFICATION_TYPES = [
+        ('new_event', 'Nouveau Evènement'),
+        ('payment_due','Date limite de paiement'),
+        ('event_start', 'Début d\'évènement'),
+        ('invoice_received','Facture reçue'),
+    ]
+    user = models.ForeignKey(User, on_delete=models.CASCADE)    
+    message = models.TextField()
+    notification_type = models.CharField(max_length=50, choices=NOTIFICATION_TYPES)
+    is_read = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    due_date = models.DateTimeField(null=True, blank=True)  # Pour gérer les dates limites de paiement
+
+    def __str__(self):
+        return f"Notification pour {self.user.username}: {self.message}"
+
+    def mark_as_read(self):
+        self.is_read = True
+        self.save()
+    
