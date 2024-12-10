@@ -1,0 +1,88 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5cc; /* Couleur de fond */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 10px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Détails de l'événement */
+.event-details {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.event-details h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.event-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Formulaire de paiement */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.payment-form label {
+    align-self: flex-start;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: orange;
+}
+
+.payment-form input {
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.payment-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 400px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.payment-button img {
+    height: 24px;
+    margin-right: 10px;
+}
+
+.payment-button span {
+    font-weight: bold;
+}
