@@ -44,6 +44,7 @@ onMounted(() => {
 <template>
   <div class="text-2xl bg-yellow-100 min-h-screen">
     <router-view />
+    <!-- <RouterLink to="/decouvrir"></RouterLink> -->
 
   </div>
 </template>
