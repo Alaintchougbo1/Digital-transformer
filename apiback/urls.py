@@ -1,9 +1,10 @@
-from django.contrib import admin
 from django.urls import path
-from .views import EventListAPI
-from .views import NotificationList
+from .views import CreateEventView, UpdateEventView, DeleteEventView, EventListView
 
 urlpatterns = [
-    path('events/', EventListAPI.as_view(), name='event_list_api'), # URL pour la liste des événements
-    path('notifications/', NotificationList.as_view(), name='notification_list_api'),  # URL pour les notifications
+    path('events/create/', CreateEventView.as_view(), name='create_event'),
+    path('events/<int:event_id>/update/', UpdateEventView.as_view(), name='update_event'),
+    path('events/<int:event_id>/delete/', DeleteEventView.as_view(), name='delete_event'),
+    path('events/', EventListView.as_view(), name='list_events'),
 ]
+
