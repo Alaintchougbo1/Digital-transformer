@@ -43,11 +43,13 @@
           >
             Historique
           </button>
-          <button
-            class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg"
-          >
-            Devenir organisateur
-          </button>
+          <RouterLink to="/formorganizer">
+            <button
+              class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg mt-4"
+            >
+              Devenir organisateur
+            </button>
+          </RouterLink>
           <button
             class="bg-orange-500 text-white py-2 px-6 rounded-lg w-full flex justify-center hover:bg-orange-400 text-lg"
           >

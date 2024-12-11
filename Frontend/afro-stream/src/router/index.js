@@ -9,6 +9,8 @@ import AchatBillet from '@/components/AchatBillet.vue';
 // import { name } from '@vue/eslint-config-prettier/skip-formatting';
 import Evenement from '@/components/Evenement.vue';
 import MesTickets from '@/components/MesTickets.vue';
+// import { name } from '@vue/eslint-config-prettier/skip-formatting';
+import FormOganizer from '@/components/FormOrganizer.vue';
 
 const routes = [
   { path: '/', name: 'PreAccueil', component: PreAccueil },
@@ -19,6 +21,7 @@ const routes = [
   { path: '/achat', name: 'Achat', component: AchatBillet },
   { path: '/eventfutu', name: 'Eventfutu', component: Evenement },
   { path: '/tickets', name: 'tickets', component: MesTickets },
+  { path: '/formorganizer', name: 'Formorganizer', component: FormOganizer },
 ];
 
 const router = createRouter({
